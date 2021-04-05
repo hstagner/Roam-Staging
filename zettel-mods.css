@@ -1,0 +1,170 @@
+/* Remove block reference styling */
+.rm-block-ref,
+.roam-block .rm-block-ref,
+span[style*="color: red"] {
+  color             : var(--body-text) !important;
+  border-bottom     : none !important;
+  border-right-color: var(--references) !important;
+  border-right-width: 0px !important;
+  border-right-style: solid;
+  padding-right     : 2px !important;
+  border-left-color : var(--references) !important;
+  border-left-width : 0px !important;
+  border-left-style : solid;
+  padding-left      : 2px !important;
+  border-radius     : 5px !important;
+  padding-top       : 2px !important;
+  padding-bottom    : 4px !important;
+}
+
+/* add vertical line before block reference*/
+.rm-block-ref::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    border-radius: 40px;
+    height: 12px;
+    background: #FF9800;
+    margin-right: 8px;
+}
+
+/* turn off underlining */ 
+.rm-block-ref{
+    border-bottom: none;
+}
+
+/* Remove Block Embed Styling */
+/* Block and Page embed */
+
+.rm-embed--page.rm-embed-container {
+box-shadow: none; !important;
+}
+
+.rm-embed-container {
+  background-color: transparent !important;
+}
+
+.rm-embed-inner-block-hide {
+  margin       : 2px 2px 2px 4px !important;
+  padding      : 3px 10px 3px 3px !important;
+  border-radius: 0px !important;
+  box-shadow   : none !important;
+}
+
+.rm-embed-inner-block-hide:before {
+  content: '';
+    display: inline-block;
+    width: 12px;
+    border-radius: 40px;
+    height: 1px;
+    background: #FF9800;
+    margin-right: 8px;
+  	box-shadow: none !important;
+}
+
+.rm-embed-inner-block-hide .roam-block-container.rm-not-focused.block-bullet-view {
+  margin-left: 6px;
+}
+
+.rm-embed-container .rm-page__title {
+  color      : var(--page-heading) !important;
+  font-family: var(--header-font) !important;
+  padding-top: 5px;
+  !important;
+}
+
+/* RELEVANT NOTES */
+span.rm-page-ref[data-tag="Relevant Notes"] 
+{ background: black;
+  background-size: 100%;
+  color: white !important;
+  padding: 2px 5px 2px 5px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: 500;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid;
+  border-color: #13744C;
+  border-width: thin;
+  position:relative;
+  box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px  #13744C;
+}
+
+span.rm-page-ref[data-tag="Relevant Notes"] + span[data-link-title] 
+{ background: black !important;
+  color: #F3F7F2 !important;
+  padding: 3px 5px 3px 8px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: 400;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: -8px; 
+  box-shadow: inset -1px 1px 5px ##26272A, inset 1px -1px 3px #13744C;
+}
+
+/* PERMANENT NOTES */
+span.rm-page-ref[data-tag="Permanent Notes"] 
+{ background-image: linear-gradient(90deg, #13744C, #13744C);
+  background-size: 100%;
+  color: white !important;
+  padding: 2px 5px 2px 5px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: 500;
+  border-radius: 3px 0 0 3px;
+  position:relative;
+  box-shadow: 0px 1px 3px -1px #26272A, 0px -1px 5px  #13744C;
+}
+
+span.rm-page-ref[data-tag="Permanent Notes"] + span[data-link-title] 
+{ background: black !important;
+  color: white !important;
+  padding: 3px 5px 3px 15px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: 400;
+  border-radius: 0 3px 3px 0;
+  margin-left: -5px;
+}
+
+span.rm-page-ref[data-tag="Permanent Notes"]:after, span.rm-page-ref[data-tag="Permanent Notes"]:before 
+{ left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+span.rm-page-ref[data-tag="Permanent Notes"]:after 
+{ border-color: rgba(255,255,255,0);
+  border-left-color: #13744C;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+span.rm-page-ref[data-tag="Permanent Notes"]:before 
+{ border-color: rgba(255,255,255,0);
+  border-left-color: #13744C;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+/* LITERATURE NOTES */
+span.rm-page-ref[data-tag="Literature Notes"] 
+{ background: black;
+  background-size: 100%;
+  color: white !important;
+  padding: 2px 5px 2px 5px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: 500;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid;
+  border-color: #26272A;
+  border-width: thin;
+  position:relative;
+  box-shadow: 0px 1px 3px -1px #000000, 0px -1px 5px  #26272A;
+}
