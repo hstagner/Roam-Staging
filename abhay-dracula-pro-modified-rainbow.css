@@ -1,0 +1,162 @@
+@import url('https://abhayprasanna.github.io/rainbow-indent-core.css');
+
+@import url('https://abhayprasanna.github.io/better-dark-age.css');
+
+@import url('https://fonts.googleapis.com/css?family=Commissioner|Crimson+Text|Fira+Code|Bitter|Work+Sans');
+
+/* Rainbow Indents CSS */
+.block-border-left {
+      border-left-width: 1px !important; /* Default 1px */
+      margin-left: 6px; /* Default 6px */
+      border-radius: 0; /* Set to 0 to get smooth, straight indents */
+      padding: 0 !important; /* Set to 0 to align all indents */
+  	}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* FONTS */
+    --global-font             : 'Inter', sans-serif;
+    --secondary-font          : 'Fira Code', monospace;
+    --header-font             : 'Crimson Text', serif;
+    /* WIDTH FIXES - default 568px,1032px - increase to increase WIDTH */
+    --reduce-padding-right    : 668px;
+    --reduce-padding-left     : 1132px;
+    /* COLORS - One light*/
+    --page-links              : #2979ff;
+    --attributes-color        : #986801;
+    --external-links          : #50A14E;
+    --links-hover             : #E4564A;
+    --hashtags                : #A626A4;
+    --body-text               : #292D31;
+    --italics-color           : #E4564A;
+    --bold-color              : #0184BC;
+    --highlight-text-color    : #292D31;
+    --highlighter             : #3B5E39;
+    --background              : #000000;
+    --sidebar-background      : #EAEAEB;
+    --sidebar-text            : #292D31;
+    --page-heading            : #171717;
+    --daily-heading           : #2979ff;
+    --headings                : #292D31;
+    --bullets                 : #4078F2;
+    --closed-bullets          : #4078F277;
+    --references              : #4078F2;
+    --block-reference-text    : #0184BC;
+    --namespaces              : #E4564A;
+    --all-pages-mentions      : #0184BC;
+    --cursor                  : #292D31;
+    --icons                   : #4078F2;
+    --icons-hover             : #E4564A;
+    --filter-icon             : #50A14E;
+    /* FONT SIZES */
+    --main-font-size          : 1em;
+    --page-head-font-size     : 2.2em;
+    --h1-font-size            : 2em;
+    --h2-font-size            : 1.6em;
+    --h3-font-size            : 1.2em;
+    --sidebar-h1-size         : 2.2em;
+    /* DROPDOWN MENU */
+    --dropdown-menu-background: #EAEAEB;
+    --dropdown-menu-highlight : #FAFAFA;
+    --dropdown-menu-text      : #292D31;
+    --dropdown-newpage        : #2979ff;
+    /* SEARCH BAR */
+    --search-bar-background   : #F7F8FA;
+    --search-bar-text         : #292D31;
+    /* KANBAN CARD COLORS */
+    --kanban-main-background  : #FAFAFA;
+    --kanban-column-background: #EAEAEB;
+    --kanban-card-background  : #FAFAFA;
+    --kanban-text-hover       : #E4564A;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* FONTS */
+    --global-font             : 'Inter', sans-serif;
+    --secondary-font          : 'Fira Code', monospace;
+    --header-font             : 'Bitter', serif;
+    /* WIDTH FIXES - default 568px,1032px - increase to increase WIDTH */
+    --reduce-padding-right    : 668px;
+    --reduce-padding-left     : 1132px;
+    /* COLORS (HT: Jack Laing for [[Dracula Pro]] color theme) */
+    --page-links              : #D5A979;
+    --attributes-color        : #CEA2A1;
+    --external-links          : #53A6C8;
+    --links-hover             : #EE8443;
+    --hashtags                : #FFFFFF84;
+    --body-text               : #FFFFFFB2;
+    --italics-color           : #FFFFFFB2;
+    --bold-color              : #FFFFFFB2;
+    --highlight-text-color    : #D8DADB;
+    --highlighter             : #3B5E39;
+    --background              : #26272A;
+    --sidebar-background      : #1E1E1E;
+    --sidebar-text            : #FFFFFFB2;
+    --page-heading            : #FFFFFFB2;
+    --daily-heading           : #FFFFFFB2;
+    --headings                : #FFFFFFB2;
+    --bullets                 : #394b59;
+    --closed-bullets          : #FFFFFF7C;
+    --references              : #A3B47D;
+    --block-reference-text    : #A3B47D;
+    --namespaces              : #1CD247;
+    --all-pages-mentions      : #F79A18;
+    --cursor                  : #FFFFFF;
+    --icons                   : #13744C;
+    --icons-hover             : #A06427;
+    --filter-icon             : #FF0000;
+    /* FONT SIZES */
+    --main-font-size          : 1em;
+    --page-head-font-size     : 2.2em;
+    --h1-font-size            : 2em;
+    --h2-font-size            : 1.6em;
+    --h3-font-size            : 1.2em;
+    --sidebar-h1-size         : 2.2em;
+    /* DROPDOWN MENU */
+    --dropdown-menu-background: #464545;
+    --dropdown-menu-highlight : #3E3D3D;
+    --dropdown-menu-text      : #FFFFFFB2;
+    --dropdown-newpage        : #1AD546;
+    /* SEARCH BAR */
+    --search-bar-background   : #26272A;
+    --search-bar-text         : #FFFFFF;
+    /* KANBAN CARD COLORS */
+    --kanban-main-background  : #2B2A2A;
+    --kanban-column-background: #2B2A2A;
+    --kanban-card-background  : #5959591C;
+    --kanban-text-hover       : #00EE6B;
+   
+    
+    /* Rainbow indentation */
+	/* 
+	Feel free to adjust the color variables!
+	This one has 18 colors deep (3 cycles of 3 rainbow flavored palettes).
+	This loops 3 times so it goes 54 levels deep!
+	To add more levels just target
+	.rm-level-n > div for every nth level
+	*/
+    
+    --box-shadow-values: none; /* Set to "none" to remove shadow */
+      /* 25px 0px 20px -30px; */ 
+    --indent1: #5F388BAD;
+    --indent2: #4A57BAAD;
+    --indent3: #48864DAD;
+    --indent4: #A7A15AAD;
+    --indent5: #AD7E48AD;
+    --indent6: #A5494FAD;
+    --indent7: #634071AD;
+    --indent8: #303472AD;
+    --indent9: #395C45AD;
+    --indent10: #7C7948AD;
+    --indent11: #7D5039AD;
+    --indent12: #A5494FAD;
+    --indent13: #706597AD;
+    --indent14: #657D91AD;
+    --indent15: #6D8D76AD;
+    --indent16: #A09A84AD;
+    --indent17: #987174AD;
+    --indent18: #8B5F78AD;
+    
+  }
+}
